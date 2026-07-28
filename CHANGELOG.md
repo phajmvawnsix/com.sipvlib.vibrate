@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1] - 2026-07-28
+
+Fix compile error on none-mobile devices
+
+
 ## [1.1.0] - 2026-07-19
 
 ### Added

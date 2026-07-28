@@ -1,6 +1,6 @@
 {
   "name": "com.sipvlib.vibrate",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "displayName": "SiPVLib Vibrate",
   "description": "A haptic feedback facade (VibrateManager) with config-driven presets, a persisted on/off switch, and a UI pointer-interaction component, with optional integration with the paid Solo MOST_IN_ONE Haptic Feedback Asset Store plugin.",
   "unity": "6000.3",

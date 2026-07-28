@@ -32,13 +32,17 @@ namespace SiPVLib.Vibrate.Haptics.Providers
             if (entry.TriggerMode == VibrateTriggerMode.Preset && entry.Preset == HapticType.None)
                 return;
 
+#if UNITY_ANDROID || UNITY_IOS
             Handheld.Vibrate();
+#endif
         }
 
         public void PlayPreset(HapticType type, float cooldownSeconds = 0f)
         {
             if (type == HapticType.None) return;
+#if UNITY_ANDROID || UNITY_IOS
             Handheld.Vibrate();
+#endif
         }
 
         public void Stop()
