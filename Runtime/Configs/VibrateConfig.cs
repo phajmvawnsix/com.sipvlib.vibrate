@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Alchemy.Inspector;
 using SiPVLib.Config;
 using SiPVLib.Config.Configs;
 using SiPVLib.Vibrate.Haptics;
-#if ODIN_INSPECTOR
-using Sirenix.OdinInspector;
-#endif
 using UnityEngine;
 
 namespace SiPVLib.Vibrate.Configs
@@ -31,25 +29,22 @@ namespace SiPVLib.Vibrate.Configs
         public string Id;
         public VibrateTriggerMode TriggerMode;
 
-#if ODIN_INSPECTOR
-        [ShowIf(nameof(TriggerMode), VibrateTriggerMode.Preset)]
-#endif
+        [ShowIf(nameof(IsPresetMode))]
         public HapticType Preset;
 
-#if ODIN_INSPECTOR
-        [ShowIf(nameof(TriggerMode), VibrateTriggerMode.Pattern)]
-#endif
+        [ShowIf(nameof(IsPatternMode))]
         public HapticPattern Pattern;
 
-#if ODIN_INSPECTOR
-        [ShowIf(nameof(TriggerMode), VibrateTriggerMode.Wave)]
-#endif
+        [ShowIf(nameof(IsWaveMode))]
         public HapticWave Wave;
 
-#if ODIN_INSPECTOR
-        [ShowIf(nameof(TriggerMode), VibrateTriggerMode.Sound)]
-#endif
+        [ShowIf(nameof(IsSoundMode))]
         public HapticSound Sound;
+
+        private bool IsPresetMode => TriggerMode == VibrateTriggerMode.Preset;
+        private bool IsPatternMode => TriggerMode == VibrateTriggerMode.Pattern;
+        private bool IsWaveMode => TriggerMode == VibrateTriggerMode.Wave;
+        private bool IsSoundMode => TriggerMode == VibrateTriggerMode.Sound;
     }
 
     /// <summary>

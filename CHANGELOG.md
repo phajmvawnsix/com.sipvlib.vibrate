@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.0] - 2026-09-08
+
+Odin Inspector is no longer required. VibrateConfig's per-trigger-mode field visibility now uses Alchemy (com.annulusgames.alchemy) instead of Sirenix.OdinInspector.
+
 ## [1.1.3] - 2026-09-03
 
 Pin com.sipvlib.config/debugging/event/userdata/utilities and com.cysharp.unitask to semver versions instead of git URLs, so this package installs cleanly via the OpenUPM registry.
